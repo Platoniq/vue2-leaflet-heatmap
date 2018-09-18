@@ -10,7 +10,7 @@ import "leaflet.heat";
 import { findRealParent, propsBinder } from "vue2-leaflet";
 
 const props = {
-  latLng: {
+  latLngs: {
     type: Array,
     default: () => [],
     custom: false
@@ -71,7 +71,7 @@ export default {
     if (this.max) {
       options.max = this.max;
     }
-    this.mapObject = L.heatLayer(this.latLng, options);
+    this.mapObject = L.heatLayer(this.latLngs, options);
     L.DomEvent.on(this.mapObject, this.$listeners);
     propsBinder(this, this.mapObject, props);
     this.ready = true;

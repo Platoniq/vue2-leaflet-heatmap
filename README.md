@@ -18,7 +18,7 @@ something like this
 
     <l-map :zoom=10 :center="initialLocation">
       <l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <LeafletHeatmap :latlngs="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
+      <LeafletHeatmap :lat-lngs="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
     </l-map>
 
 ### In &lt;script&gt; add
